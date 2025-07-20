@@ -18,7 +18,9 @@ public class Todoapp {
         BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
         //variable para almacenar la opcion del menu seleccionada por el usuario 
         int opcionSeleccionada = 0;
+       // Ciclo principal de la aplicación hasta que el usuario seleccione "Salir"
      
+            // Muestra el menú de opciones
         do {    
             System.out.println("Aplicacion ToDo List");
             System.out.println("----MENU DE TAREAS----   ");
@@ -33,17 +35,19 @@ public class Todoapp {
             opcionSeleccionada = Integer.parseInt(leer.readLine());
             switch (opcionSeleccionada) {
                 case 1:
-
+//crea una  nueva tarea 
                     System.out.println("ingresa la tarea");
                     System.out.println("> ");
                     serviceTask.crear(leer.readLine());
 
                     break;
+                    //Muestra una nueva tarea 
                 case 2:
 
                     serviceTask.mostrarTareas();
 
                     break;
+                   // selecciona la tarea a marcar como 
                 case 3:
                     serviceTask.listartareas();
                     System.out.println("selecciona la tarea a marcar");
@@ -52,6 +56,7 @@ public class Todoapp {
                     serviceTask.marcar(_tarea);
 
                     break;
+                    //Eliminar una tarea 
                 case 4:
                     serviceTask.listartareas();
                     System.out.println("selecciona la tarea a marcar");
@@ -61,15 +66,15 @@ public class Todoapp {
                     serviceTask.eliminarTarea(_tareaa);
                     break;
                 case 5:
+                    //Salir del programa 
                     break;
                 default:
 
             }
 
-        } while (opcionSeleccionada != 5);
-    }
+        } while (opcionSeleccionada != 5);//terminar cuando se selecciona salir   }
 
-}
+    }}
 
     
 
